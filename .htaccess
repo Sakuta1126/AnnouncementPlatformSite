@@ -1,0 +1,4 @@
+RewriteEngine on
+RewriteRule ^(images)($|/) - [L]
+RewriteCond %{REQUEST_URI} !^/index.php$
+RewriteRule ^(.+)$ index.php?url=$1 [NC,L]
