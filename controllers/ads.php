@@ -5,6 +5,7 @@ class AdsController extends Controller
     {
         $model = new Ad();
         $this->returnView('index', $model->Index());
+        
     }
     protected function getName()
     {

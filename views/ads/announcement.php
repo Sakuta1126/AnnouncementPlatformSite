@@ -36,6 +36,9 @@
             <h2 class="bi-bookmark-check-fill">Duties</h2>
         </div>
         <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-xs-12 p-3 mb-3 text-center">
+        <h1 class="bi bi-gift-fill">Benefits</h1>
+        </div>
+        <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-xs-12 p-3 mb-3 text-center">
             <h1 class="bi-check-circle-fill">
                 Requirements
             </h1>
