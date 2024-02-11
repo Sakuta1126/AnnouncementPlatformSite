@@ -36,6 +36,14 @@
                     <?php if (isset($_SESSION['is_logged_in'])): ?>
 
                         <li class="nav-item">
+                            <a class="nav-link" href="<?php echo ROOT_URL; ?>applied">Ulubione
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="<?php echo ROOT_URL; ?>favourite">Zaaplikowane
+                            </a>
+                        </li>
+                        <li class="nav-item">
                             <a class="nav-link" href="<?php echo ROOT_URL; ?>users/profile">Witaj,
                                 <?php echo $_SESSION['user_data']['login']; ?>
                             </a>
