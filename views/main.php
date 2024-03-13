@@ -23,7 +23,7 @@
                 <ul class="navbar-nav me-auto">
                     <li class="nav-item">
 
-                        <a class="nav-link" href="<?php echo ROOT_URL; ?>">Start</a>
+                        <a class="nav-link" href="<?php echo ROOT_URL; ?>"><strong>Start</strong></a>
                     </li>
                     <li>
 
@@ -36,27 +36,28 @@
                     <?php if (isset($_SESSION['is_logged_in'])): ?>
 
                         <li class="nav-item">
-                            <a class="nav-link" href="<?php echo ROOT_URL; ?>applied">Ulubione
-                            </a>
+                            <a class="nav-link" href="<?php echo ROOT_URL; ?>applied"><strong>Ulubione
+                                </strong></a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="<?php echo ROOT_URL; ?>favourite">Zaaplikowane
-                            </a>
+                            <a class="nav-link" href="<?php echo ROOT_URL; ?>favourite"><strong>Zaaplikowane
+                                </strong> </a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="<?php echo ROOT_URL; ?>users/profile">Witaj,
-                                <?php echo $_SESSION['user_data']['login']; ?>
-                            </a>
+                            <a class="nav-link" href="<?php echo ROOT_URL; ?>users/profile"><strong>Witaj,
+                                    <?php echo $_SESSION['user_data']['login']; ?>
+                                </strong> </a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="<?php echo ROOT_URL; ?>users/logout">Wyloguj</a>
+                            <a class="nav-link" href="<?php echo ROOT_URL; ?>users/logout"><strong>Wyloguj</strong></a>
                         </li>
                     <?php else: ?>
                         <li class="nav-item">
-                            <a class="nav-link" href="<?php echo ROOT_URL; ?>users/login">Zaloguj</a>
+                            <a class="nav-link" href="<?php echo ROOT_URL; ?>users/login"><strong>Zaloguj</strong></a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="<?php echo ROOT_URL; ?>users/register">Zarejestruj</a>
+                            <a class="nav-link" href="<?php echo ROOT_URL; ?>users/register"><strong>
+                                    Zarejestruj</strong></a>
                         </li>
                     <?php endif; ?>
                 </ul>

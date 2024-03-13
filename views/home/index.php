@@ -10,10 +10,7 @@
           <h1>Witaj na stronie z ogłoszeniami!</h1>
           <p class="lead">Na tej stronie znajdziesz najlepsze ogłoszenia, zaloguj sie aby móc je obejrzeć</p>
           <section class="hero text-center text-white animate__animated animate__fadeIn">
-            <div class="container">
-              <h1 class="display-4 fw-bold mb-4">Znajdź Swoją Wymarzoną Pracę</h1>
-              <p class="lead">Najlepsze ogłoszenia o pracę czekają na Ciebie. Dołącz do naszej społeczności już dziś!</p>
-            </div>
+
           </section>
 
           <!-- Why Us Section -->
@@ -69,7 +66,7 @@
             <div class="container text-center">
               <h2 class="display-4 fw-bold mb-4">Skontaktuj Się Z Nami</h2>
               <p class="lead">Masz pytania? Jesteśmy tu, aby pomóc. Skontaktuj się z nami.</p>
-              <a href="#contact" class="btn btn-primary btn-lg mt-3">Kontakt</a>
+              <a href="#contact" class="btn btn-primary btn-lg mt-3" onclick="showContactAlert()">Kontakt</a>
             </div>
           </section>
         </div>
@@ -85,12 +82,7 @@
           <a class="btn	btn-primary	text-center" href="<?php
           echo ROOT_URL; ?>ads">Zobacz</a>
           <section class="hero text-center text-white animate__animated animate__fadeIn">
-            <div class="container">
-              <h1 class="display-4 fw-bold mb-4">Znajdź Swoją Wymarzoną Pracę</h1>
-              <p class="lead">Najlepsze ogłoszenia o pracę czekają na Ciebie. Dołącz do naszej społeczności już dziś!
-              </p>
 
-            </div>
           </section>
           <section id="why-us" class="bg-light py-5 animate__animated animate__fadeIn">
             <div class="container text-center">

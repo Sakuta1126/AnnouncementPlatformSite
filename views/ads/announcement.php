@@ -21,35 +21,35 @@
             </p>
         </div>
         <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-xs-12 p-3 mb-3 bg-light">
-            <h2 class="bi-cash-stack">Salary</h2>
+            <h2 class="bi-cash-stack"> Salary</h2>
             <?php echo $model['sallary'] ?>PLN
         </div>
         <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-xs-12 p-3 mb-3 bg-light">
-            <h2 class="bi-clipboard">Contract-Type </h2>
+            <h2 class="bi-clipboard"> Contract-Type </h2>
             <?php echo $model['contract_type'] ?>
         </div>
         <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-xs-12 p-3 mb-3 bg-light">
-            <h2 class="bi-clock">Working Hours</h2>
+            <h2 class="bi-clock"> Working Hours</h2>
             <?php echo $model['working_hours'] ?>
         </div>
         <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-xs-12 p-3 mb-3 bg-light">
-            <h2 class="bi-bicycle">Working Type </h2>
+            <h2 class="bi-bicycle"> Working Type </h2>
             <?php echo $model['work_type'] ?>
         </div>
         <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-xs-12 p-3 mb-3 bg-light">
-            <h2 class="bi-brightness-alt-high">Working Time</h2>
+            <h2 class="bi-brightness-alt-high"> Working Time</h2>
             <?php echo $model['working_time'] ?>
         </div>
         <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-xs-12 p-3 mb-3 bg-light">
-            <h2 class="bi-calendar-x">Expire Date</h2>
+            <h2 class="bi-calendar-x"> Expire Date</h2>
             <?php echo $model['expire_date'] ?>
         </div>
         <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-xs-12 p-3 mb-3 bg-light">
-            <h2 class="bi-bookmark-check-fill">Duties</h2>
+            <h2 class="bi-bookmark-check-fill"> Duties</h2>
             <?php echo $model['duties'] ?>
         </div>
         <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-xs-12 p-3 mb-3 text-center">
-            <h1 class="bi bi-gift-fill">Benefits</h1>
+            <h1 class="bi bi-gift-fill"> Benefits</h1>
             <?php echo $model['benefits'] ?>
         </div>
         <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-xs-12 p-3 mb-3 text-center">

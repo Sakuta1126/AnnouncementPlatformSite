@@ -10,23 +10,23 @@
 </head>
 
 <body>
-    <div class="card bg-light">
-        <div class="card-header text-dark">
-            <h3 class="card-title">Zakładanie konta</h3>
+    <div class="card">
+        <div class="card-header">
+            <h3 class="card-title">Zarejestruj się</h3>
         </div>
-        <div class="card-body">
+        <div class="card-body text-center">
             <form method="post" action="<?php echo ROOT_URL;
             ?>users/createAccount">
                 <div class="mb-3">
-                    <label for="name" class="form-label">Imię</label>
-                    <input type="text" class="form-control-sm" name="name" id="name">
+                    <label for="name" class="form-label h3">Login</label>
+                    <input type="text" class="form-control" name="name" id="name">
                 </div>
 
                 <div class="mb-3">
-                    <label for="password" class="form-label">Hasło</label>
-                    <input type="password" class="form-control-sm" name="password" id="password">
+                    <label for="password" class="form-label h3">Hasło</label>
+                    <input type="password" class="form-control" name="password" id="password">
                 </div>
-                <button type="submit" class="btn btn-primary mb-4" name="submit">Zakładam konto</button>
+                <button type="submit" class="btn btn-primary" name="submit">Zakładam konto</button>
             </form>
         </div>
     </div>

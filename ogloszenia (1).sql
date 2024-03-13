@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Sty 13, 2024 at 06:48 PM
+-- Generation Time: Mar 04, 2024 at 11:31 PM
 -- Wersja serwera: 10.4.28-MariaDB
 -- Wersja PHP: 8.2.4
 
@@ -41,6 +41,7 @@ CREATE TABLE `announcement` (
   `duties` text NOT NULL,
   `requirements` text NOT NULL,
   `benefits` text NOT NULL,
+  `sallary` decimal(10,2) NOT NULL,
   `title` varchar(100) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_polish_ci;
 
@@ -48,11 +49,9 @@ CREATE TABLE `announcement` (
 -- Dumping data for table `announcement`
 --
 
-INSERT INTO `announcement` (`announcement_id`, `company_id`, `category_id`, `position_name`, `position_level`, `contract_type`, `working_time`, `work_type`, `working_hours`, `expire_date`, `duties`, `requirements`, `benefits`, `title`) VALUES
-(1, 0, 1, '[value-5]', 'Specjalista (Mid/Regular)', '', 'Dodatkowa / tymczasowa', 'Praca hybrydowa', '[value-10]', '2023-11-15', '[value-12]', '[value-13]', '[value-14]', 'Szukany pracownik dla sklepu'),
-(2, 1001, 2001, 'Programista Java', 'Starszy Specjalista (Senior)', 'Umowa o pracę', 'Pełny etat', 'Praca zdalna', '40 godzin t', '2023-12-31', 'Rozwój i utrzymanie aplikacji Java', 'Doświadczenie w programowaniu w Javie, znajomość Spring', 'Elastyczny czas pracy, karta multisport', 'Starszy Programista Java - Praca zdalna'),
-(4, 1003, 2003, 'Asystent Biura', 'Asystent', 'Umowa o pracę', 'Część etatu', 'Praca stacjonarna', '20 godzin t', '2023-12-31', 'Obsługa biura, pomoc w organizacji spotkań', 'Dyspozycyjność w godzinach porannych', 'Elastyczne godziny pracy', 'Asystent Biura - Część etatu'),
-(6, 1005, 2005, 'Stażysta ds. HR', 'Praktykant / Stażysta', 'Umowa o staż / praktyki', 'Pełny etat', 'Praca zdalna', '30 godzin t', '2023-12-31', 'Wsparcie w działach HR, uczestnictwo w projektach rekrutacyjnych', 'Studia na kierunku HR, komunikatywność', 'Mentorstwo, szkolenia', 'Stażysta ds. HR - Praca zdalna');
+INSERT INTO `announcement` (`announcement_id`, `company_id`, `category_id`, `position_name`, `position_level`, `contract_type`, `working_time`, `work_type`, `working_hours`, `expire_date`, `duties`, `requirements`, `benefits`, `sallary`, `title`) VALUES
+(4, 1003, 2003, 'Asystent Biura', 'Asystent', 'Umowa o pracę', 'Część etatu', 'Praca stacjonarna', '20 godzin t', '2023-12-31', 'Obsługa biura, pomoc w organizacji spotkań', 'Dyspozycyjność w godzinach porannych', 'Elastyczne godziny pracy', 0.00, 'Asystent Biura - Część etatu'),
+(6, 1005, 2005, 'Stażysta ds. HR', 'Praktykant / Stażysta', 'Umowa o staż / praktyki', 'Pełny etat', 'Praca zdalna', '30 godzin t', '2023-12-31', 'Wsparcie w działach HR, uczestnictwo w projektach rekrutacyjnych', 'Studia na kierunku HR, komunikatywność', 'Mentorstwo, szkolenia', 0.00, 'Stażysta ds. HR - Praca zdalna');
 
 -- --------------------------------------------------------
 
@@ -287,7 +286,8 @@ INSERT INTO `user_language` (`language_id`, `language`, `level`, `user_id`) VALU
 (3, 'awdawd', 'zaawansowany', 1),
 (4, 'bbbbxxxxxbbbbbbbbbbbbb', 'podstawowy', 1),
 (5, '', 'podstawowy', 1),
-(6, 'angielski', 'podstawowy', 1);
+(6, 'angielski', 'podstawowy', 1),
+(7, '', 'podstawowy', 1);
 
 -- --------------------------------------------------------
 
@@ -367,7 +367,8 @@ INSERT INTO `user_skill` (`skill_id`, `user_id`, `name`) VALUES
 (6, 1, 'licencja na helikopter'),
 (7, 1, 'licencja na helikopter'),
 (8, 1, ''),
-(9, 1, '');
+(9, 1, ''),
+(10, 1, 'prawo jazdy kategorii xxx');
 
 --
 -- Indeksy dla zrzutów tabel
@@ -546,7 +547,7 @@ ALTER TABLE `user_experience`
 -- AUTO_INCREMENT for table `user_language`
 --
 ALTER TABLE `user_language`
-  MODIFY `language_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+  MODIFY `language_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 
 --
 -- AUTO_INCREMENT for table `user_link`
@@ -570,7 +571,7 @@ ALTER TABLE `user_saved`
 -- AUTO_INCREMENT for table `user_skill`
 --
 ALTER TABLE `user_skill`
-  MODIFY `skill_id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
+  MODIFY `skill_id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
