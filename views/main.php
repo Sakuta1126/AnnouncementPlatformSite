@@ -7,16 +7,14 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Ogłoszenia</title>
 
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-gH2y5nZqVxgEX24KM3oamFOMQBSv8BJEH8yP4qU+l4U6j593kKhZqX6jwo9OKv5" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2y5nZqVxgEX24KM3oamFOMQBSv8BJEH8yP4qU+l4U6j593kKhZqX6jwo9OKv5" crossorigin="anonymous">
 </head>
 
 <body>
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <div class="container">
             <a class="navbar-brand" href="#">Ogłoszenia</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar"
-                aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbar">
@@ -33,14 +31,14 @@
                 <img src="http://localhost/Sigmowo/images/Sigmowo.png" class="img-fluid" alt="...">
 
                 <ul class="navbar-nav ms-auto">
-                    <?php if (isset($_SESSION['is_logged_in'])): ?>
+                    <?php if (isset($_SESSION['is_logged_in'])) : ?>
 
                         <li class="nav-item">
-                            <a class="nav-link" href="<?php echo ROOT_URL; ?>applied"><strong>Ulubione
+                            <a class="nav-link" href="<?php echo ROOT_URL; ?>applied"><strong>Zaaplikowane
                                 </strong></a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="<?php echo ROOT_URL; ?>favourite"><strong>Zaaplikowane
+                            <a class="nav-link" href="<?php echo ROOT_URL; ?>favourites"><strong>Ulubione
                                 </strong> </a>
                         </li>
                         <li class="nav-item">
@@ -51,7 +49,7 @@
                         <li class="nav-item">
                             <a class="nav-link" href="<?php echo ROOT_URL; ?>users/logout"><strong>Wyloguj</strong></a>
                         </li>
-                    <?php else: ?>
+                    <?php else : ?>
                         <li class="nav-item">
                             <a class="nav-link" href="<?php echo ROOT_URL; ?>users/login"><strong>Zaloguj</strong></a>
                         </li>
@@ -95,9 +93,7 @@
         </footer>
 
     </div>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
-        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
 </body>
 
 </html>

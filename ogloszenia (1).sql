@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Mar 04, 2024 at 11:31 PM
+-- Generation Time: Mar 30, 2024 at 09:42 PM
 -- Wersja serwera: 10.4.28-MariaDB
 -- Wersja PHP: 8.2.4
 
@@ -41,17 +41,35 @@ CREATE TABLE `announcement` (
   `duties` text NOT NULL,
   `requirements` text NOT NULL,
   `benefits` text NOT NULL,
-  `sallary` decimal(10,2) NOT NULL,
-  `title` varchar(100) NOT NULL
+  `title` varchar(100) NOT NULL,
+  `sallary` decimal(10,2) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_polish_ci;
 
 --
 -- Dumping data for table `announcement`
 --
 
-INSERT INTO `announcement` (`announcement_id`, `company_id`, `category_id`, `position_name`, `position_level`, `contract_type`, `working_time`, `work_type`, `working_hours`, `expire_date`, `duties`, `requirements`, `benefits`, `sallary`, `title`) VALUES
-(4, 1003, 2003, 'Asystent Biura', 'Asystent', 'Umowa o pracę', 'Część etatu', 'Praca stacjonarna', '20 godzin t', '2023-12-31', 'Obsługa biura, pomoc w organizacji spotkań', 'Dyspozycyjność w godzinach porannych', 'Elastyczne godziny pracy', 0.00, 'Asystent Biura - Część etatu'),
-(6, 1005, 2005, 'Stażysta ds. HR', 'Praktykant / Stażysta', 'Umowa o staż / praktyki', 'Pełny etat', 'Praca zdalna', '30 godzin t', '2023-12-31', 'Wsparcie w działach HR, uczestnictwo w projektach rekrutacyjnych', 'Studia na kierunku HR, komunikatywność', 'Mentorstwo, szkolenia', 0.00, 'Stażysta ds. HR - Praca zdalna');
+INSERT INTO `announcement` (`announcement_id`, `company_id`, `category_id`, `position_name`, `position_level`, `contract_type`, `working_time`, `work_type`, `working_hours`, `expire_date`, `duties`, `requirements`, `benefits`, `title`, `sallary`) VALUES
+(1, 0, 1, '[value-5]', 'Specjalista (Mid/Regular)', '', 'Dodatkowa / tymczasowa', 'Praca hybrydowa', '[value-10]', '2023-11-15', '[value-12]', '[value-13]', '[value-14]', 'Szukany pracownik dla sklepu', 0.00),
+(2, 1001, 2001, 'Programista Java', 'Starszy Specjalista (Senior)', 'Umowa o pracę', 'Pełny etat', 'Praca zdalna', '40 godzin t', '2023-12-31', 'Rozwój i utrzymanie aplikacji Java', 'Doświadczenie w programowaniu w Javie, znajomość Spring', 'Elastyczny czas pracy, karta multisport', 'Starszy Programista Java - Praca zdalna', 0.00),
+(4, 1003, 2003, 'Asystent Biura', 'Asystent', 'Umowa o pracę', 'Część etatu', 'Praca stacjonarna', '20 godzin t', '2023-12-31', 'Obsługa biura, pomoc w organizacji spotkań', 'Dyspozycyjność w godzinach porannych', 'Elastyczne godziny pracy', 'Asystent Biura - Część etatu', 0.00),
+(6, 1005, 2005, 'Stażysta ds. HR', 'Praktykant / Stażysta', 'Umowa o staż / praktyki', 'Pełny etat', 'Praca zdalna', '30 godzin t', '2023-12-31', 'Wsparcie w działach HR, uczestnictwo w projektach rekrutacyjnych', 'Studia na kierunku HR, komunikatywność', 'Mentorstwo, szkolenia', 'Stażysta ds. HR - Praca zdalna', 0.00),
+(25, 1, 1, 'awd', 'Praktykant / Stażysta', 'Umowa o pracę', 'Część etatu', 'Praca stacjonarna', 'awd', '2024-01-03', 'awd', 'awd', 'awd', 'awd', 13.00),
+(26, 1, 1, '', 'Praktykant / Stażysta', 'Umowa o pracę', 'Część etatu', 'Praca stacjonarna', '', '0000-00-00', '', '', '', '', 0.00),
+(27, 1, 1, '', 'Praktykant / Stażysta', 'Umowa o pracę', 'Część etatu', 'Praca stacjonarna', '', '0000-00-00', '', '', '', '', 0.00),
+(28, 1, 1, '', 'Praktykant / Stażysta', 'Umowa o pracę', 'Część etatu', 'Praca stacjonarna', '', '0000-00-00', '', '', '', '', 0.00),
+(29, 1, 1, '', 'Praktykant / Stażysta', 'Umowa o pracę', 'Część etatu', 'Praca stacjonarna', '', '0000-00-00', '', '', '', '', 0.00),
+(30, 1, 1, '', 'Praktykant / Stażysta', 'Umowa o pracę', 'Część etatu', 'Praca stacjonarna', '', '0000-00-00', '', '', '', '', 0.00),
+(31, 1, 1, '', 'Praktykant / Stażysta', 'Umowa o pracę', 'Część etatu', 'Praca stacjonarna', '', '0000-00-00', '', '', '', '', 0.00),
+(32, 1, 1, '', 'Praktykant / Stażysta', 'Umowa o pracę', 'Część etatu', 'Praca stacjonarna', '', '0000-00-00', '', '', '', '', 0.00),
+(33, 1, 1, '', 'Praktykant / Stażysta', 'Umowa o pracę', 'Część etatu', 'Praca stacjonarna', '', '0000-00-00', '', '', '', '', 0.00),
+(34, 1, 1, '', 'Praktykant / Stażysta', 'Umowa o pracę', 'Część etatu', 'Praca stacjonarna', '', '0000-00-00', '', '', '', '', 0.00),
+(35, 1, 1, '', 'Praktykant / Stażysta', 'Umowa o pracę', 'Część etatu', 'Praca stacjonarna', '', '0000-00-00', '', '', '', '', 0.00),
+(36, 1, 12, 'awdawd', 'Praktykant / Stażysta', 'Umowa o pracę', 'Dodatkowa / tymczasowa', 'Praca zdalna', 'awdaw', '2024-02-15', 'dawd', 'awdawd', 'dawdawd', 'awdawd', 123.00),
+(37, 1, 6, 'aawdawd', 'Praktykant / Stażysta', 'Umowa o pracę', 'Część etatu', 'Praca stacjonarna', 'wdawd', '2024-02-10', 'awda', 'awd', 'awd', 'awd', 123.00),
+(38, 1, 5, 'QSqs', 'Praktykant / Stażysta', 'Umowa o pracę', 'Część etatu', 'Praca stacjonarna', 'QSqs', '2024-02-10', 'qs', 'QS', 'qs', 'QS', 12.00),
+(39, 1, 5, 'dawd', 'Specjalista (Mid/Regular)', 'Umowa o pracę', 'Część etatu', 'Praca stacjonarna', 'awdawd', '2024-02-21', 'awd', 'awd', 'awda', 'awd', 123.00),
+(40, 6, 2, 'qawdawda', 'Praktykant / Stażysta', 'Umowa o pracę', 'Część etatu', 'Praca stacjonarna', 'awdawd', '2024-02-22', 'awdawd', 'awdawd', 'awda', 'awd', 123.00);
 
 -- --------------------------------------------------------
 
@@ -100,6 +118,19 @@ CREATE TABLE `announcement_working_days` (
   `sunday` tinyint(1) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_polish_ci;
 
+--
+-- Dumping data for table `announcement_working_days`
+--
+
+INSERT INTO `announcement_working_days` (`working_days_id`, `announcement_id`, `monday`, `tuesday`, `wednesday`, `thursday`, `friday`, `saturday`, `sunday`) VALUES
+(1, 26, 1, 0, 0, 0, 0, 0, 0),
+(2, 35, 1, 0, 1, 0, 0, 1, 0),
+(3, 36, 1, 1, 0, 1, 0, 1, 0),
+(4, 37, 0, 0, 0, 0, 1, 1, 1),
+(5, 38, 0, 0, 1, 1, 1, 0, 0),
+(6, 39, 0, 0, 1, 0, 1, 0, 0),
+(7, 40, 0, 0, 0, 0, 1, 1, 1);
+
 -- --------------------------------------------------------
 
 --
@@ -119,7 +150,21 @@ CREATE TABLE `company` (
 --
 
 INSERT INTO `company` (`company_id`, `name`, `adress`, `localization_link`, `description`) VALUES
-(1, '[value-2]', '[value-3]', '[value-4]', '[value-5]');
+(1, '[value-2]', '[value-3]', '[value-4]', '[value-5]'),
+(2, 'awdawda', 'awda', 'wdawdaw', 'dawd'),
+(6, 'awd', 'awdaw', 'dawd', 'dawda');
+
+-- --------------------------------------------------------
+
+--
+-- Struktura tabeli dla tabeli `favourites`
+--
+
+CREATE TABLE `favourites` (
+  `favourite_id` int(10) UNSIGNED NOT NULL,
+  `announcement_id` int(10) UNSIGNED NOT NULL,
+  `user_id` int(10) UNSIGNED NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_polish_ci;
 
 -- --------------------------------------------------------
 
@@ -143,7 +188,8 @@ INSERT INTO `user` (`user_id`, `login`, `password`, `role_id`) VALUES
 (2, 'user', '40bd001563085fc35165329ea1ff5c5ecbdbbeef', 1),
 (3, 'user', '40bd001563085fc35165329ea1ff5c5ecbdbbeef', 1),
 (4, 'user', '40bd001563085fc35165329ea1ff5c5ecbdbbeef', 1),
-(5, 'user', '40bd001563085fc35165329ea1ff5c5ecbdbbeef', 1);
+(5, 'user', '40bd001563085fc35165329ea1ff5c5ecbdbbeef', 1),
+(6, 'b', 'e9d71f5ee7c92d6dc9e92ffdad17b8bd49418f98', 1);
 
 -- --------------------------------------------------------
 
@@ -156,6 +202,15 @@ CREATE TABLE `user_application` (
   `announcement_id` int(10) UNSIGNED NOT NULL,
   `user_id` int(10) UNSIGNED NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_polish_ci;
+
+--
+-- Dumping data for table `user_application`
+--
+
+INSERT INTO `user_application` (`application_id`, `announcement_id`, `user_id`) VALUES
+(12, 1, 1),
+(13, 2, 1),
+(14, 26, 1);
 
 -- --------------------------------------------------------
 
@@ -286,8 +341,7 @@ INSERT INTO `user_language` (`language_id`, `language`, `level`, `user_id`) VALU
 (3, 'awdawd', 'zaawansowany', 1),
 (4, 'bbbbxxxxxbbbbbbbbbbbbb', 'podstawowy', 1),
 (5, '', 'podstawowy', 1),
-(6, 'angielski', 'podstawowy', 1),
-(7, '', 'podstawowy', 1);
+(6, 'angielski', 'podstawowy', 1);
 
 -- --------------------------------------------------------
 
@@ -367,8 +421,7 @@ INSERT INTO `user_skill` (`skill_id`, `user_id`, `name`) VALUES
 (6, 1, 'licencja na helikopter'),
 (7, 1, 'licencja na helikopter'),
 (8, 1, ''),
-(9, 1, ''),
-(10, 1, 'prawo jazdy kategorii xxx');
+(9, 1, '');
 
 --
 -- Indeksy dla zrzutów tabel
@@ -400,6 +453,14 @@ ALTER TABLE `announcement_working_days`
 --
 ALTER TABLE `company`
   ADD PRIMARY KEY (`company_id`);
+
+--
+-- Indeksy dla tabeli `favourites`
+--
+ALTER TABLE `favourites`
+  ADD PRIMARY KEY (`favourite_id`),
+  ADD KEY `announcement_id` (`announcement_id`),
+  ADD KEY `user_id` (`user_id`);
 
 --
 -- Indeksy dla tabeli `user`
@@ -487,37 +548,43 @@ ALTER TABLE `user_skill`
 -- AUTO_INCREMENT for table `announcement`
 --
 ALTER TABLE `announcement`
-  MODIFY `announcement_id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=25;
+  MODIFY `announcement_id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=41;
 
 --
 -- AUTO_INCREMENT for table `announcement_category`
 --
 ALTER TABLE `announcement_category`
-  MODIFY `category_id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
+  MODIFY `category_id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
 
 --
 -- AUTO_INCREMENT for table `announcement_working_days`
 --
 ALTER TABLE `announcement_working_days`
-  MODIFY `working_days_id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT;
+  MODIFY `working_days_id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 
 --
 -- AUTO_INCREMENT for table `company`
 --
 ALTER TABLE `company`
-  MODIFY `company_id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `company_id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+
+--
+-- AUTO_INCREMENT for table `favourites`
+--
+ALTER TABLE `favourites`
+  MODIFY `favourite_id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- AUTO_INCREMENT for table `user`
 --
 ALTER TABLE `user`
-  MODIFY `user_id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `user_id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
 -- AUTO_INCREMENT for table `user_application`
 --
 ALTER TABLE `user_application`
-  MODIFY `application_id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT;
+  MODIFY `application_id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
 
 --
 -- AUTO_INCREMENT for table `user_course`
@@ -547,7 +614,7 @@ ALTER TABLE `user_experience`
 -- AUTO_INCREMENT for table `user_language`
 --
 ALTER TABLE `user_language`
-  MODIFY `language_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+  MODIFY `language_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
 -- AUTO_INCREMENT for table `user_link`
@@ -571,7 +638,18 @@ ALTER TABLE `user_saved`
 -- AUTO_INCREMENT for table `user_skill`
 --
 ALTER TABLE `user_skill`
-  MODIFY `skill_id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
+  MODIFY `skill_id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
+
+--
+-- Constraints for dumped tables
+--
+
+--
+-- Constraints for table `favourites`
+--
+ALTER TABLE `favourites`
+  ADD CONSTRAINT `favourites_ibfk_1` FOREIGN KEY (`announcement_id`) REFERENCES `announcement` (`announcement_id`) ON DELETE CASCADE ON UPDATE CASCADE,
+  ADD CONSTRAINT `favourites_ibfk_2` FOREIGN KEY (`user_id`) REFERENCES `user` (`user_id`) ON DELETE CASCADE ON UPDATE CASCADE;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

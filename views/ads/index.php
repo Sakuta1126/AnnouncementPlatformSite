@@ -3,11 +3,8 @@ $rows = $model['rows'];
 $post = $model['post'];
 $categories = $model['categories'];
 ?>
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
-    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
-    crossorigin="anonymous"></script>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
 <div class="container bg-light">
     <div class="row">
@@ -16,15 +13,13 @@ $categories = $model['categories'];
             <form method="post" action="<?php echo ROOT_URL; ?>ads">
                 <div class="mb-3">
                     <label for="PositionName" class="form-label">Nazwa stanowiska</label>
-                    <input type="text" class="form-control" id="PositionName" name="text"
-                        placeholder="Wpisz Slowa kluczowe"
-                        value="<?php echo (isset($post['text']) === true) ? $post['text'] : ""; ?>">
+                    <input type="text" class="form-control" id="PositionName" name="text" placeholder="Wpisz Slowa kluczowe" value="<?php echo (isset($post['text']) === true) ? $post['text'] : ""; ?>">
                 </div>
                 <div class="mb-3">
                     <label for="Category" class="form-label">Kategoria</label>
                     <select class="form-select" id="category_id" name="category_id">
                         <option value="" selected>Wybierz kategorię</option>
-                        <?php foreach ($categories as $category): ?>
+                        <?php foreach ($categories as $category) : ?>
                             <option value="<?php echo $category['category_id'] ?>" <?php echo (isset($post['category_id']) && $post['category_id'] == $category['category_id']) ? "selected" : "" ?>>
                                 <?php echo $category['name'] ?>
                             </option>
@@ -33,9 +28,7 @@ $categories = $model['categories'];
                 </div>
                 <div class="mb-3">
                     <label for="Localization" class="form-label">Lokalizacja</label>
-                    <input type="text" class="form-control" id="Localization" name="localization"
-                        placeholder="Wpisz lokalizację"
-                        value="<?php echo (isset($post['localization']) === true) ? $post['localization'] : ""; ?>">
+                    <input type="text" class="form-control" id="Localization" name="localization" placeholder="Wpisz lokalizację" value="<?php echo (isset($post['localization']) === true) ? $post['localization'] : ""; ?>">
                 </div>
         </div>
         <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-xs-12 p-3 bg-light text-center">
@@ -101,16 +94,15 @@ $categories = $model['categories'];
             </button>
             </form>
         </div>
-        <?php if ($_SESSION['user_data']['role'] === "Admin"): ?>
+        <?php if ($_SESSION['user_data']['role'] === "Admin") : ?>
             <a class="btn btn-primary text-center m-3" href="<?php echo ROOT_URL; ?>ads/add">Dodaj ogłoszenie</a>
-                <a class="btn btn-primary text-center m-3"
-                    href="<?php echo ROOT_URL; ?>category">Kategorie</a>
+            <a class="btn btn-primary text-center m-3" href="<?php echo ROOT_URL; ?>category">Kategorie</a>
             <a class="btn btn-primary text-center m-3" href="<?php echo ROOT_URL; ?>company">Firmy</a>
         <?php endif; ?>
     </div>
 </div>
 
-<?php foreach ($rows as $item): ?>
+<?php foreach ($rows as $item) : ?>
     <div class="card mb-3">
         <div class="card-header bg-primary">
             <h3 class="card-title text-white">
@@ -129,11 +121,9 @@ $categories = $model['categories'];
                 <?php echo $item['expire_date']; ?>
 
             </p>
-            <a class="btn btn-primary text-center m-3"
-                href="<?php echo ROOT_URL; ?>ads/announcement/<?php echo $item['announcement_id'] ?>">Zobacz</a>
-            <?php if ($_SESSION['user_data']['role'] === "Admin"): ?>
-                <a class="btn btn-primary text-center m-3"
-                    href="<?php echo ROOT_URL; ?>ads/delete/<?php echo $item['announcement_id'] ?>">Usuń</a>
+            <a class="btn btn-primary text-center m-3" href="<?php echo ROOT_URL; ?>ads/announcement/<?php echo $item['announcement_id'] ?>">Zobacz</a>
+            <?php if ($_SESSION['user_data']['role'] === "Admin") : ?>
+                <a class="btn btn-primary text-center m-3" href="<?php echo ROOT_URL; ?>ads/delete/<?php echo $item['announcement_id'] ?>">Usuń</a>
             <?php endif; ?>
         </div>
     </div>

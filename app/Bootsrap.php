@@ -24,7 +24,7 @@ class Bootstrap
                 if (
                     method_exists(
                         $this->controller,
-                        $this->action // tutaj sie cos odjebalo, action jest 'error'
+                        $this->action
                     )
                 ) {
                     return $this->controller;
@@ -67,7 +67,8 @@ class Bootstrap
             $controllerName = ucfirst(strtolower($components[1]));
             $controllerClass = $controllerName . "Controller";
 
-            if (!class_exists($controllerClass)) throw new Exception("Nie	znaleziono	klasy	kontrolera.");
+            if (!class_exists($controllerClass))
+                throw new Exception("Nie	znaleziono	klasy	kontrolera.");
             switch ($componentsCount) {
                 case 2:
                     // host www + sam controller

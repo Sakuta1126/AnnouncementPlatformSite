@@ -13,10 +13,12 @@ class AdsController extends Controller
     public function announcement($id)
     {
         $model = new Ad();
-        $result = $model->announcement($id);
+        $favouritesModel = new Favourites();
+        $result['announcement'] = $model->announcement($id);
         if ($result == null) {
             $this->redirect('home');
         }
+        $result['is_favourite'] = $favouritesModel->isFavourite($id);
         $this->returnView('announcement', $result);
     }
 
@@ -56,6 +58,5 @@ class AdsController extends Controller
             );
             $this->redirect('ads', 'add');
         }
-
     }
 }
